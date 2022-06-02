@@ -1,0 +1,9 @@
+.EventDetails {
+  font-size: 18px;
+  list-style-type: square;
+  line-height: 1.8;
+}
+
+.EventDetails_title {
+  font-weight: 700;
+}

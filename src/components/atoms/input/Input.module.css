@@ -1,0 +1,16 @@
+.Input {
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.Input::placeholder {
+  color: var(--color-text-disabled);
+  font-weight: var(--font-weight-basic-medium);
+}
+
+.Input:disabled {
+  background-color: var(--color-input-disabled);
+  color: var(--color-text-disabled);
+}

@@ -1,0 +1,11 @@
+.EventForm {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.EventForm_button {
+  margin-top: 24px;
+  align-self: flex-end;
+}
