@@ -16,7 +16,7 @@ module.exports = {
       titlePrefix: "Screens",
     },
   ],
-  addons: ["@storybook/addon-essentials", "@storybook/addon-interactions"],
+  addons: ["@storybook/addon-essentials", "@storybook/addon-interactions", "@storybook/addon-a11y"],
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-vite",
@@ -30,6 +30,7 @@ module.exports = {
         include: [
           "@storybook/react/dist/esm/client/docs/config",
           "@storybook/react/dist/esm/client/preview/config",
+          "@storybook/addon-a11y/preview.js",
           "@storybook/addon-docs/preview.js",
           "@storybook/addon-actions/preview.js",
           "@storybook/addon-backgrounds/preview.js",
