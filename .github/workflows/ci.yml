@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # chromatic needs the entire history
+          fetch-depth: 0
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install
+      - name: build storybook
+        run: yarn build-storybook
+      - name: Publish to Chromatic
+        id: chromatic-publish
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: "storybook-static"
+          exitOnceUploaded: true
+          # Turbosnap if this is not the main branch
+          onlyChanged: "!(main)**"
