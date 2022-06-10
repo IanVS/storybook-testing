@@ -11,8 +11,4 @@ export default meta;
 
 type Story = ComponentStoryObj<typeof App>;
 
-export const Standard: Story = {
-  args: {
-    children: "Form label",
-  },
-};
+export const Standard: Story = {};
