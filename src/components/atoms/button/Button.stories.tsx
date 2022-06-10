@@ -7,6 +7,7 @@ const meta: ComponentMeta<typeof Button> = {
   component: Button,
   argTypes: {
     backgroundColor: { control: "color" },
+    onClick: { action: "clicked" },
   },
   args: {
     label: "Button",
