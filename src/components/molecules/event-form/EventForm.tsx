@@ -22,8 +22,8 @@ export function EventForm({ onSubmit, errorMessage }: Props) {
 
   return (
     <form action="post" onSubmit={handleSubmit} className={styles.EventForm}>
-      <Label>Proposed event topic</Label>
-      <Input name="eventName" hasError={Boolean(errorMessage)} />
+      <Label htmlFor="event-name">Proposed event topic</Label>
+      <Input id="event-name" name="eventName" hasError={Boolean(errorMessage)} />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       <div className={styles.EventForm_button}>
         <Button type="submit" primary={true} label="Submit" />

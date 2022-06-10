@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="App-logo" src={logo} />
+        <img className="App-logo" src={logo} alt="sem.js logo" />
         <h1>Hello SEM.js!</h1>
         {successMessage && <span role="alert">{successMessage}</span>}
       </header>
