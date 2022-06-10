@@ -23,6 +23,7 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    interactionsDebugger: true,
   },
   viteFinal: async (config) => {
     return mergeConfig(config, {
