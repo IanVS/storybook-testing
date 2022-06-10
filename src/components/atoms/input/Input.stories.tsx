@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { userEvent, within } from "@storybook/testing-library";
 
 import { Input } from "./Input";
 
@@ -27,5 +28,13 @@ export const Error: Story = {
   args: {
     defaultValue: "Something's wrong",
     hasError: true,
+  },
+};
+
+export const Focused: Story = {
+  args: {},
+  play: async ({ canvasElement }) => {
+    const { getByRole } = within(canvasElement);
+    await userEvent.click(getByRole("textbox"));
   },
 };
