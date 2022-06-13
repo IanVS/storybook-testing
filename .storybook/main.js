@@ -16,7 +16,7 @@ module.exports = {
       titlePrefix: "Screens",
     },
   ],
-  addons: ["@storybook/addon-essentials", "@storybook/addon-interactions"],
+  addons: ["@storybook/addon-essentials", "@storybook/addon-interactions", "@storybook/addon-a11y"],
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-vite",
