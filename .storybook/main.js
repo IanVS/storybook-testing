@@ -28,6 +28,7 @@ module.exports = {
   viteFinal: async (config) => {
     return mergeConfig(config, {
       optimizeDeps: {
+        entries: [".storybook/preview.jsx"],
         include: [
           "@storybook/react/dist/esm/client/docs/config",
           "@storybook/react/dist/esm/client/preview/config",
