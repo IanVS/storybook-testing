@@ -1,3 +1,5 @@
+const { mergeConfig } = require("vite");
+
 module.exports = {
   stories: [
     "./Introduction.stories.mdx",
@@ -21,5 +23,21 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+  },
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: [
+          "@storybook/react/dist/esm/client/docs/config",
+          "@storybook/react/dist/esm/client/preview/config",
+          "@storybook/addon-docs/preview.js",
+          "@storybook/addon-actions/preview.js",
+          "@storybook/addon-backgrounds/preview.js",
+          "@storybook/addon-measure/preview.js",
+          "@storybook/addon-outline/preview.js",
+          "@storybook/addon-interactions/preview.js",
+        ],
+      },
+    });
   },
 };
