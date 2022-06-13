@@ -7,7 +7,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preview-storybook": "http-server storybook-static --port 6006 --silent",
+    "test-storybook": "test-storybook",
+    "test-storybook:watch": "test-storybook --watch",
+    "test-storybook:ci": "run-p --race test-storybook preview-storybook"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -23,12 +27,16 @@
     "@storybook/builder-vite": "^0.1.35",
     "@storybook/jest": "^0.0.10",
     "@storybook/react": "^6.5.6",
+    "@storybook/test-runner": "^0.1.1",
     "@storybook/testing-library": "^0.0.11",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.5.6",
+    "http-server": "^14.1.1",
+    "jest": "27",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3",
     "vite": "^2.9.9"

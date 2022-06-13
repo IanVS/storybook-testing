@@ -33,3 +33,7 @@ jobs:
           exitOnceUploaded: true
           # Turbosnap if this is not the main branch
           onlyChanged: "!(main)**"
+      - name: Test storybook
+        run: "yarn test-storybook:ci"
+        env:
+          TARGET_URL: ${{steps.chromatic-publish.outputs.storybookUrl}}
