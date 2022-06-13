@@ -5131,10 +5131,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.2.0":
+"axe-core@npm:^4.0.1, axe-core@npm:^4.2.0":
   version: 4.4.2
   resolution: "axe-core@npm:4.4.2"
   checksum: 93fbb36c5ac8ab5e67e49678a6f7be0dc799a9f560edd95cca1f0a8183def8c50205972366b9941a3ea2b20224a1fe230e6d87ef38cb6db70472ed1b694febd1
+  languageName: node
+  linkType: hard
+
+"axe-playwright@npm:^1.1.11":
+  version: 1.1.11
+  resolution: "axe-playwright@npm:1.1.11"
+  dependencies:
+    axe-core: ^4.0.1
+  peerDependencies:
+    playwright-core: ">1.0.0"
+  checksum: 651deb9c2b1df94bb39472bdbbc449e56460ca58826b50c8fd654803d0823d9c09eae181daf24f2350fb822278f435c6cff1009fc077cfaf49af2252759b7478
   languageName: node
   linkType: hard
 
@@ -15050,6 +15061,7 @@ __metadata:
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^1.3.0
+    axe-playwright: ^1.1.11
     babel-loader: ^8.2.5
     chromatic: ^6.5.6
     classnames: ^2.3.1
