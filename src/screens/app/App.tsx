@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAllPrismicDocumentsByType } from "@prismicio/react";
 import { EventForm } from "../../components/molecules/event-form/EventForm";
 import { EventList } from "../../components/molecules/event-list/EventList";
 import logo from "./SEMjs.jpeg";
@@ -7,6 +8,8 @@ import "./App.css";
 function App() {
   const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
   const [successMessage, setSuccessMessage] = useState<string | undefined>(undefined);
+  const [documents = []] = useAllPrismicDocumentsByType("event");
+  const events = documents.map((d) => ({ title: d.data.title[0].text, date: new Date(d.data.date) }));
 
   function handleSuggestEvent(name: string) {
     if (name.length < 3) {
@@ -28,7 +31,7 @@ function App() {
       <div className="App-body">
         <div className="App-event-list">
           <h2>Upcoming events</h2>
-          <EventList events={[]} />
+          <EventList events={events} />
         </div>
         <div className="App-suggest">
           <h2>Suggest an event</h2>

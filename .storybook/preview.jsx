@@ -1,3 +1,6 @@
+import { PrismicProvider } from "@prismicio/react";
+import { client } from "../src/prismic";
+
 import "../src/global.css";
 
 export const parameters = {
@@ -18,3 +21,9 @@ export const parameters = {
     ],
   },
 };
+
+export const decorators = [prismicDecorator];
+
+function prismicDecorator(story) {
+  return <PrismicProvider client={client}>{story()}</PrismicProvider>;
+}

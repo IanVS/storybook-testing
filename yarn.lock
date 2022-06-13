@@ -2277,6 +2277,60 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prismicio/client@npm:^6.5.1":
+  version: 6.5.1
+  resolution: "@prismicio/client@npm:6.5.1"
+  dependencies:
+    "@prismicio/helpers": ^2.3.0
+    "@prismicio/types": ^0.1.27
+  checksum: 1cdb2ce57609bc2e80d3e5f7df49310fda925480703cc1d6832ec3418c9f5a1ae5041771b39b37e059755bda2fceda3859b67870880cb2ce5b1e9cd3e0d6951b
+  languageName: node
+  linkType: hard
+
+"@prismicio/helpers@npm:^2.3.0, @prismicio/helpers@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@prismicio/helpers@npm:2.3.1"
+  dependencies:
+    "@prismicio/richtext": ^2.0.1
+    "@prismicio/types": ^0.1.27
+    escape-html: ^1.0.3
+    imgix-url-builder: ^0.0.3
+  checksum: 9574337c79a62695667fa7237f5850fc8c368bf9c451a5d7d2860c9106c7d514714f6ab4a2f62a1c407e2d988259716c5b674133c5bccd25efe1ba1aa3595165
+  languageName: node
+  linkType: hard
+
+"@prismicio/react@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "@prismicio/react@npm:2.4.2"
+  dependencies:
+    "@prismicio/helpers": ^2.3.1
+    "@prismicio/richtext": ^2.0.1
+  peerDependencies:
+    "@prismicio/client": ^6.0.0
+    react: ^16.8 || ^17 || ^18
+  peerDependenciesMeta:
+    "@prismicio/client":
+      optional: true
+  checksum: acf23f99be45187cd76ad24ee7bed8dac6ce9baec60bde929252c9e2e70cf388b66cddbadf8f807233acb7653b56a23553f59f05b1ba5fc87a866db8ff998a87
+  languageName: node
+  linkType: hard
+
+"@prismicio/richtext@npm:^2.0.1":
+  version: 2.1.0
+  resolution: "@prismicio/richtext@npm:2.1.0"
+  dependencies:
+    "@prismicio/types": ^0.1.22
+  checksum: 17e7b9d2c015feb5f03b772b12a233035a01ec79102003baef4fef09cc0fcd8d26724d5cdc62c96fdd89c88c251b3aaedd611e3048214284679703c4fed622a6
+  languageName: node
+  linkType: hard
+
+"@prismicio/types@npm:^0.1.22, @prismicio/types@npm:^0.1.27":
+  version: 0.1.28
+  resolution: "@prismicio/types@npm:0.1.28"
+  checksum: 7464a2e02368a81403b8d43dcf10714212405c35bf1842d4e1bbdaad09a26357115007627a9251d10572c425d92a18001058fee66da166071e298726ccc9a6c1
+  languageName: node
+  linkType: hard
+
 "@rollup/pluginutils@npm:^4.2.1":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
@@ -7901,7 +7955,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"escape-html@npm:~1.0.3":
+"escape-html@npm:^1.0.3, escape-html@npm:~1.0.3":
   version: 1.0.3
   resolution: "escape-html@npm:1.0.3"
   checksum: 6213ca9ae00d0ab8bccb6d8d4e0a98e76237b2410302cf7df70aaa6591d509a2a37ce8998008cbecae8fc8ffaadf3fb0229535e6a145f3ce0b211d060decbb24
@@ -9589,6 +9643,13 @@ __metadata:
   version: 5.2.0
   resolution: "ignore@npm:5.2.0"
   checksum: 6b1f926792d614f64c6c83da3a1f9c83f6196c2839aa41e1e32dd7b8d174cef2e329d75caabb62cb61ce9dc432f75e67d07d122a037312db7caa73166a1bdb77
+  languageName: node
+  linkType: hard
+
+"imgix-url-builder@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "imgix-url-builder@npm:0.0.3"
+  checksum: 50ce7e9c0f294aa654d4191def8cbcad4c33615a3daa8a231096418a17a4988b144f0c88527e3394ed52b2e48656469bc2a98780de7bc7d942abf3f0224c8153
   languageName: node
   linkType: hard
 
@@ -15049,6 +15110,8 @@ __metadata:
   resolution: "storybook-testing@workspace:."
   dependencies:
     "@babel/core": ^7.18.2
+    "@prismicio/client": ^6.5.1
+    "@prismicio/react": ^2.4.2
     "@storybook/addon-a11y": ^6.5.6
     "@storybook/addon-actions": ^6.5.6
     "@storybook/addon-essentials": ^6.5.6
